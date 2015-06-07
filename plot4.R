@@ -22,7 +22,7 @@ with(hpcSubset, {
 
 ## Saving to plot4.png file
 print("Saving to plot4.png file ...")
-dev.copy(png, file = "plot4.png", height = 480, width = 480)
+dev.copy(png, file = "plot4.png", height = 480, width = 480, units = "px", bg = "transparent")
 dev.off()
 
 ## Remove dataset objects from R enviroment

@@ -6,6 +6,7 @@ source("gettingData.R")
 
 ## Plotting
 print("Generating the plot ...")
+par(mfrow = c(1,1))
 with(hpcSubset, {
   plot(Sub_metering_1 ~ Datetime, type="l", xlab="", ylab="Energy sub metering", )
   lines(Sub_metering_2 ~ Datetime, col = "red")
@@ -15,7 +16,7 @@ legend("topright", col = c("black", "red", "blue"), lty = 1, lwd = 2, legend = c
 
 ## Saving to plot3.png file
 print("Saving to plot3.png file ...")
-dev.copy(png, file = "plot3.png", height = 480, width = 480)
+dev.copy(png, file = "plot3.png", height = 480, width = 480, units = "px", bg = "transparent")
 dev.off()
 
 ## Remove dataset objects from R enviroment
